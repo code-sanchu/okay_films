@@ -25,16 +25,22 @@
 	let bottomSectionHeight: number | undefined;
 </script>
 
+<div class="md:hidden fixed z-50 inset-0 grid place-items-center p-4">
+	<div class="text-xl tracking-wide">
+		This site is a prototype. <br /> Please view on a device larger than 768px in width.
+	</div>
+</div>
+
 {#if !firstVideoReady}
 	<div
-		class="fixed z-30 left-0 top-0 w-full h-full grid place-items-center bg-white"
+		class="fixed z-30 left-0 top-0 w-full h-full hidden md:grid place-items-center bg-white"
 		transition:fade
 	>
 		<MySpinner />
 	</div>
 {/if}
 
-<div class="flex h-screen w-screen overflow-hidden">
+<div class="hidden md:flex h-screen w-screen overflow-hidden ">
 	<div class="w-[20vw] h-screen">
 		<Header />
 	</div>
