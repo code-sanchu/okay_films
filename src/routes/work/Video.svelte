@@ -1,19 +1,17 @@
 <script lang="ts">
 	import { myCrossfade } from '$lib/helpers/transition';
-	import { circIn, quintOut } from 'svelte/easing';
-	import { fade, slide, fly } from 'svelte/transition';
-	import { Vimeo } from 'sveltekit-embed';
 	import { createEventDispatcher } from 'svelte';
+	import { quintOut } from 'svelte/easing';
+	import { fade, fly } from 'svelte/transition';
 
 	const dispatch = createEventDispatcher();
 
 	type ImgTransformStatus = 'idle' | 'opening' | 'open' | 'closing';
 
 	export let id: string;
-	export let thumbImg: string;
+	export let imgSrc: string;
 	export let title: string;
-	export let vimeoVideoId: string;
-	export let aspectRatio: string = '16/9';
+	export let videoSrc: string;
 
 	const [sendImg, receiveImg] = myCrossfade({
 		duration: 1200,
@@ -68,9 +66,8 @@
 				class={`absolute object-cover transition-all ease-in-out duration-300 ${
 					untransformedHover ? 'grayscale' : ''
 				}`}
-				src={`/images/video-thumbnails${thumbImg}`}
+				src={imgSrc}
 				loading="lazy"
-				style="aspect-ratio: {aspectRatio};"
 				alt=""
 			/>
 		</div>
@@ -113,16 +110,16 @@
 			>
 				{#if imgTransformStatus === 'opening'}
 					<img
-						class={`z-20 absolute w-full h-full object-contain`}
-						style="aspect-ratio: {aspectRatio};"
-						src={`/images/video-thumbnails${thumbImg}`}
+						class={`z-20 absolute w-full h-full object-cover aspect-video`}
+						src={imgSrc}
 						loading="lazy"
 						alt=""
 						out:fade={{ delay: 300, duration: 600 }}
 					/>
 				{:else}
 					<div class="z-20 absolute w-full h-full">
-						<Vimeo vimeoId={vimeoVideoId} />
+						<!-- svelte-ignore a11y-media-has-caption -->
+						<video src={videoSrc} {title} muted autoplay />
 					</div>
 				{/if}
 			</div>

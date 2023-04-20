@@ -44,11 +44,10 @@
 							<div class="aspect-video" />
 						{:else}
 							<Video
-								thumbImg={video.thumbImg}
+								imgSrc={video.imgSrc}
 								title={video.title}
 								id={video.id}
-								vimeoVideoId={video.vimeoVideoId}
-								aspectRatio={video.aspectRatio}
+								videoSrc={video.videoSrc}
 								on:imgTransform={(e) => {
 									transformStatus = e.detail.state;
 								}}

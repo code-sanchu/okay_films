@@ -2,12 +2,32 @@ import { writable } from 'svelte/store';
 
 function createVideoStore() {
 	const videos = [
-		{ id: 'abc', src: '/videos/ink-67358.mp4', title: 'video 1', num: 1 },
-		{ id: 'def', src: '/videos/lighthouse-1917.mp4', title: 'video 2', num: 2 },
-		{ id: 'jkl', src: '/videos/ink-67358.mp4', title: 'video 3', num: 3 },
-		{ id: 'ghi', src: '/videos/sunrise-83880.mp4', title: 'video 4', num: 4 },
-		{ id: 'mno', src: '/videos/lighthouse-1917.mp4', title: 'video 5', num: 5 },
-		{ id: 'pqr', src: '/videos/sunrise-83880.mp4', title: 'video 6', num: 6 }
+		{
+			id: crypto.randomUUID(),
+			src: '/videos/stock_video-woods&sunrise-6s.mp4',
+			title: 'video 5',
+			num: 5
+		},
+		{
+			id: crypto.randomUUID(),
+			src: '/videos/stock_video-sea&lighthouse-8s.mp4',
+			title: 'video 6',
+			num: 6
+		},
+		{ id: crypto.randomUUID(), src: '/videos/stock_video-ink-14s.mp4', title: 'video 1', num: 1 },
+		{
+			id: crypto.randomUUID(),
+			src: '/videos/stock_video-woods&sunrise-6s.mp4',
+			title: 'video 2',
+			num: 2
+		},
+		{
+			id: crypto.randomUUID(),
+			src: '/videos/stock_video-sea&lighthouse-8s.mp4',
+			title: 'video 3',
+			num: 3
+		},
+		{ id: crypto.randomUUID(), src: '/videos/stock_video-ink-14s.mp4', title: 'video 4', num: 4 }
 	];
 
 	const { subscribe, update } = writable({ videos, activeId: videos[2].id });

@@ -1,121 +1,85 @@
+const imgSrcBase = '/images/video-thumbnails/';
+const videoSrcBase = '/videos/';
+
 export const videos = [
 	{
-		aspectRatio: '426/156',
 		id: crypto.randomUUID(),
-		thumbImg: '/cancer_research-stand_up_to_cancer-2016.avif',
-		title: 'Cancer Research: Stand Up To Cancer 2016',
-		vimeoVideoId: '452156833'
+		imgSrc: imgSrcBase + 'ink.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-ink-14s.mp4'
 	},
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/nandos_booth_truths_season_1.avif',
-		title: "Nando's Booth Truths Season 1 Teaser",
-		vimeoVideoId: '452166659'
+		imgSrc: imgSrcBase + 'lighthouse.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-sea&lighthouse-8s.mp4'
 	},
 	0,
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Battersea Dogs and Cats Home 30 TVC.avif',
-		title: 'Battersea Dogs and Cats Home 30" TVC',
-		vimeoVideoId: '452183199'
+		imgSrc: imgSrcBase + 'woods-sun.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-woods&sunrise-6s.mp4'
 	},
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Confused Idents.avif',
-		title: 'Confused Idents',
-		vimeoVideoId: '452157059'
+		imgSrc: imgSrcBase + '4.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-ink-14s.mp4'
 	},
 	0,
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Iceland Christmas 2018 Mince Pies.avif',
-		title: 'Iceland Christmas 2018: Mince Pies',
-		vimeoVideoId: '452161431'
+		imgSrc: imgSrcBase + '5.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-sea&lighthouse-8s.mp4'
 	},
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/The Teenage Cancer Trust 2020.avif',
-		title: 'The Teenage Cancer Trust 2020',
-		vimeoVideoId: '452175068'
+		imgSrc: imgSrcBase + '6.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-woods&sunrise-6s.mp4'
 	},
 	0,
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Panasonic Multishaper 2023.avif',
-		title: 'Panasonic Multishaper 2023',
-		vimeoVideoId: '805185168'
+		imgSrc: imgSrcBase + '7.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-ink-14s.mp4'
 	},
 	0,
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Christian Pulisic Signature Sound.avif',
-		title: 'Christian Pulisic Signature Sound',
-		vimeoVideoId: '805189317'
+		imgSrc: imgSrcBase + '8.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-sea&lighthouse-8s.mp4'
 	},
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/NCS presents Mixtape 22.avif',
-		title: 'NCS presents Mixtape ‘22',
-		vimeoVideoId: '452175068'
+		imgSrc: imgSrcBase + '9.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-woods&sunrise-6s.mp4'
 	},
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/NCS - Mixtape 22.avif',
-		title: 'NCS - Mixtape 22',
-		vimeoVideoId: '693183460'
-	},
-	{
-		aspectRatio: '640/360',
-		id: crypto.randomUUID(),
-		thumbImg: '/Puma - Suede Music - Ghetts.avif',
-		title: 'Puma - Suede Music - Ghetts',
-		vimeoVideoId: '682907968'
+		imgSrc: imgSrcBase + '10.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-ink-14s.mp4'
 	},
 	0,
-	{
-		aspectRatio: '426/240',
-		id: crypto.randomUUID(),
-		thumbImg: '/Highland Park.avif',
-		title: 'Highland Park',
-		vimeoVideoId: '805184740'
-	},
+	0,
+	0,
 	0,
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Deepmind - Albyyou - Manifesto.avif',
-		title: 'Deepmind - Albyyou - Manifesto',
-		vimeoVideoId: '452175068'
+		imgSrc: imgSrcBase + '11.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-sea&lighthouse-8s.mp4'
 	},
 	{
-		aspectRatio: '426/240',
 		id: crypto.randomUUID(),
-		thumbImg: '/Allianz Sound of Confidence.avif',
-		title: 'Allianz - Sound of Confidence',
-		vimeoVideoId: '768151182'
-	},
-	{
-		aspectRatio: '640/360',
-		id: crypto.randomUUID(),
-		thumbImg: '/Fabric of Britain - Trailer.avif',
-		title: 'Fabric of Britain - Trailer',
-		vimeoVideoId: '682907866'
-	},
-	0,
-	{
-		aspectRatio: '640/360',
-		id: crypto.randomUUID(),
-		thumbImg: '/Fabric of Britain - Full Film.avif',
-		title: 'Fabric of Britain - Full Film',
-		vimeoVideoId: '682906290'
+		imgSrc: imgSrcBase + '12.png',
+		title: 'Example Video',
+		videoSrc: videoSrcBase + 'stock_video-woods&sunrise-6s.mp4'
 	}
 ];
