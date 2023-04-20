@@ -82,7 +82,7 @@
 			<div />
 			<div>
 				<button
-					class="uppercase text-brand tracking-wide text-xs font-bold"
+					class="uppercase text-brand tracking-wide text-xs md:text-base lg:text-lg font-bold"
 					on:click={() => {
 						if (imgTransformStatus !== 'open') {
 							return;
@@ -119,7 +119,7 @@
 				{:else}
 					<div class="z-20 absolute w-full h-full">
 						<!-- svelte-ignore a11y-media-has-caption -->
-						<video src={videoSrc} {title} muted autoplay />
+						<video class="w-full h-full object-cover" src={videoSrc} {title} muted autoplay />
 					</div>
 				{/if}
 			</div>
