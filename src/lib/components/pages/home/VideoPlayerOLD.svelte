@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts">
 	import MySlider from '$lib/components/MySlider.svelte';
 	import MuteIcon from '$lib/components/icons/MuteIcon.svelte';
 	import NextIcon from '$lib/components/icons/NextIcon.svelte';
@@ -7,18 +7,16 @@
 	import VolumeIcon from '$lib/components/icons/VolumeIcon.svelte';
 	import { videoStore } from '$lib/stores/videos';
 	import { fade } from 'svelte/transition';
-</script>
 
-<script lang="ts">
 	export let src: string;
 	export let title: string;
 	export let num: number;
 	export let pageReady: boolean;
+	export let isActive: boolean;
 	export let onLoadedData: () => void;
+	export let hasBeenUnmuted: boolean;
 	export let muted: boolean;
 	export let sliderVolume: number[];
-	export let isActive: boolean;
-	export let hasBeenUnmuted: boolean;
 
 	const totalVids = $videoStore.videos.length;
 
@@ -71,7 +69,7 @@
 <video
 	class={`absolute bottom-0 right-0 h-full w-full overflow-hidden object-cover ${
 		!pageReady ? 'opacity-0' : 'opacity-100'
-	} delay-600 transition-all duration-1000 ease-in-out ${isActive ? 'grayscale-0' : 'grayscale'}`}
+	} delay-600 transition-opacity duration-1000 ease-in-out`}
 	on:loadeddata={() => {
 		if (!isActive) {
 			return;

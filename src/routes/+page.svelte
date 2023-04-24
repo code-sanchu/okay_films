@@ -50,15 +50,16 @@
 			<div class="relative aspect-video w-[60vw]">
 				{#each videos as video, index (video.id)}
 					<div
-						class={`${
+						class={`
+						${
 							index === 0
-								? `absolute left-0 top-0 z-20 -translate-x-[200%] -translate-y-[200%]  grayscale`
+								? `absolute left-0 top-0 z-20 -translate-x-[200%] -translate-y-[200%] grayscale`
 								: index === 1
-								? `absolute left-0 top-0 z-20 -translate-x-full -translate-y-full grayscale`
+								? `absolute left-0 top-0 z-20 -translate-x-full -translate-y-full`
 								: index === 2
 								? 'absolute z-20 w-full'
 								: index === 3
-								? 'absolute bottom-0 right-0 z-20 translate-x-full translate-y-full grayscale'
+								? 'absolute bottom-0 right-0 z-20 translate-x-full translate-y-full'
 								: 'absolute bottom-0 right-0 z-20 translate-x-[200%] translate-y-[200%] grayscale'
 						}`}
 						style="height: {topSectionHeight && (index === 0 || index === 1)
